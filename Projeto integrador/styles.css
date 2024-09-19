@@ -1,0 +1,318 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+nav {
+  background-color: #111;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8em;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #a5a1a1;
+}
+
+/* Header */
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('barbershop.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 2s ease-out;
+}
+
+header p {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.cta-button {
+  background-color: #e63946;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #c72c3a;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Serviços */
+#services {
+  background-color: #fff;
+  padding: 100px 50px;
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#services h2::after {
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: #e63946;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 30%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1.1em;
+  color: #666;
+}
+
+/* Formulário de Agendamento */
+#schedule {
+  background-color: #f4f4f9;
+  padding: 100px 50px;
+  text-align: center;
+}
+
+#schedule h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#schedule h2::after {
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: #e63946;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+form {
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  font-size: 1.1em;
+  margin-top: 10px;
+  display: block;
+  text-align: left;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1.1em;
+}
+
+form button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+  background-color: #c72c3a;
+  transform: translateY(-5px);
+}
+
+/* Contato */
+#contact {
+  background-color: #fff;
+  padding: 100px 50px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+#contact p {
+  font-size: 1.3em;
+  color: #666;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  font-size: 1em;
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .service-cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 3em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 1.2em;
+  }
+
+  .cta-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  form input, form select {
+    padding: 10px;
+  }
+}
+
+.login-trigger {
+  cursor: pointer;
+  background-color: #fd0000;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+}

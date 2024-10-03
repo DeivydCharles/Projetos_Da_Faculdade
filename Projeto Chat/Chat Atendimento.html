@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat de Atendimento</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div id="chat-container">
+        <header>
+            <h2>Atendimento On-line</h2>
+        </header>
+        <div id="chat-box">
+            <div class="message-item">
+                <div class="msg-user"><strong>Atendente diz:</strong></div>
+                <div class="msg-chat">Olá Sr.</div>
+            </div>
+            <div class="message-item">
+                <div class="msg-user"><strong>Atendente diz:</strong></div>
+                <div class="msg-chat">Tudo bem?</div>
+            </div>
+            <div class="message-item message-user">
+                <div class="msg-user"><strong>Você diz:</strong></div>
+                <div class="msg-chat">Sim</div>
+            </div>
+            <div class="message-item message-user">
+                <div class="msg-user"><strong>Você diz:</strong></div>
+                <div class="msg-chat">E como você está?</div>
+            </div>
+            <div class="message-item">
+                <div class="msg-user"><strong>Atendente diz:</strong></div>
+                <div class="msg-chat">Que bom.</div>
+            </div>
+            <div class="message-item">
+                <div class="msg-user"><strong>Atendente diz:</strong></div>
+                <div class="msg-chat">Oque você precisa?</div>
+            </div>
+        </div>
+        <form id="chat-form">
+            <input type="text" id="message-input" placeholder="Digite sua Mensagem..." required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html>

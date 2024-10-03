@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema de Barbearia</title>
+  <title>Barberdevlops.com</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Navbar -->
   <nav>
-    <div class="logo">Barbearia Corte Certo</div>
+    <div class="logo">Barberdevlops</div>
     <ul>
       <li><a href="#home">Início</a></li>
       <li><a href="#services">Serviços</a></li>
       <li><a href="#schedule">Agendar</a></li>
       <li><a href="#contact">Contato</a></li>
       <li><a class="login-trigger" onclick="openLoginModal()">Login</a></li>
+      <li><a class="register-trigger" onclick="openRegisterModal()">Registrar</a></li>
     </ul>
   </nav>
 
   <!-- Seção Principal -->
   <header id="home">
-    <h1>Bem-vindo à Barbearia Corte certo</h1>
+    <h1>Bem-vindo à Barberdevlops</h1>
     <p>Estilo e precisão para o seu visual.</p>
     <a href="#schedule" class="cta-button">Agende seu horário agora!</a>
   </header>
@@ -40,8 +41,8 @@
         <p>Modelagem e cuidados com a barba.</p>
       </div>
       <div class="card">
-        <h3>Spa Capilar</h3>
-        <p>Tratamento relaxante para o couro cabeludo.</p>
+        <h3>Barba e Corte</h3>
+        <p>Tratamento completo para deixar a sua beleza em dia.</p>
       </div>
     </div>
   </section>
@@ -57,7 +58,7 @@
       <select id="service" name="service" required>
         <option value="corte">Corte de Cabelo</option>
         <option value="barba">Barba</option>
-        <option value="spa">Spa Capilar</option>
+        <option value="spa">Barba e corte</option>
       </select>
 
       <label for="barber">Barbeiro:</label>
@@ -79,17 +80,55 @@
   <!-- Contato -->
   <section id="contact">
     <h2>Contato</h2>
-    <p>Endereço: Rua Exemplo, 123 - Centro</p>
+    <p>Endereço: Rua virginia da luz bernada, 196 - Santo Antonio</p>
     <p>Telefone: (11) 1234-5678</p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; Todos os direitos reservados.</p>
+    <p>&copy; Barberdevlops Todos os direitos reservados.</p>
   </footer>
 
-  <script src="scripts.js"></script>
-  </script>
+  <!-- Modal de Registro -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close-reg" onclick="closeRegisterModal()">&times;</span>
+      <h2>Registrar</h2>
+      <form id="registerForm">
+        <label for="register-name">Nome:</label>
+        <input type="text" id="register-name" name="register-name" required>
 
+        <label for="register-email">E-mail:</label>
+        <input type="email" id="register-email" name="register-email" required>
+
+        <label for="register-password">Senha:</label>
+        <input type="password" id="register-password" name="register-password" required>
+
+        <label for="register-confirm-password">Confirmar Senha:</label>
+        <input type="password" id="register-confirm-password" name="register-confirm-password" required>
+
+        <button type="submit">Registrar</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+  
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+  
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="loginError" style="color: red; display: none;">Usuário ou senha incorretos.</p>
+    </div>
+  </div>
+
+  <script src="Funcionalidades.JS"></script>
 </body>
 </html>

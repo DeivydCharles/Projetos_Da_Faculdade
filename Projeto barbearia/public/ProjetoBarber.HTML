@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BarberDevLops</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <img src="favicon.png" alt="Logo" style="height: 64px; vertical-align: middle; margin-right: 10px;">
+      BarberDevLops
+    </div>
+    <ul>
+      <li><a href="#home">Início</a></li>
+      <li><a href="#services">Serviços</a></li>
+      <li><a href="#schedule">Agendar</a></li>
+      <li><a href="#contact">Contato</a></li>
+      <li><a href="#" class="login-trigger">Login</a></li>
+      <li><a href="#" class="register-trigger">Registrar</a></li>
+    </ul>
+  </nav>
+
+  <!-- Seção Principal -->
+  <header id="home">
+    <h1>Bem-vindo à BarberDevLops</h1>
+    <p>Onde você entra feio e sai feio porque cortamos cabelo não fazemos milagre!</p>
+    <a href="#schedule" class="cta-button">Agende seu horário agora!</a>
+  </header>
+
+  <!-- Serviços -->
+  <section id="services">
+    <h2>Nossos Serviços</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Corte Masculino</h3>
+        <p>Estilos modernos e clássicos para todos os gostos.</p>
+      </div>
+      <div class="card">
+        <h3>Barba</h3>
+        <p>Modelagem e cuidados com a barba.</p>
+      </div>
+      <div class="card">
+        <h3>Barba e Corte</h3>
+        <p>Tratamento completo para deixar sua beleza em dia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de Agendamento -->
+  <section id="schedule">
+    <h2>Agende seu Horário</h2>
+    <form>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="service">Serviço:</label>
+      <select id="service" name="service" required>
+        <option value="corte">Corte de Cabelo</option>
+        <option value="barba">Barba</option>
+        <option value="barba_corte">Barba e Corte</option>
+      </select>
+
+      <label for="barber">Barbeiro:</label>
+      <select id="barber" name="barber" required>
+        <option value="joao">João</option>
+        <option value="carlos">Carlos</option>
+      </select>
+
+      <label for="date">Data:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Horário:</label>
+      <input type="time" id="time" name="time" required>
+
+      <button type="submit">Agendar</button>
+    </form>
+  </section>
+
+  <!-- Contato -->
+  <section id="contact">
+    <h2>Contato</h2>
+    <p>Endereço: Rua Virgínia da Luz Bernada, 196 - Santo Antônio</p>
+    <p>Telefone: (11) 1234-5678</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BarberDevLops - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Modal de Registro -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close-reg" onclick="closeRegisterModal()">&times;</span>
+      <h2>Registrar</h2>
+      <form id="registerForm">
+        <label for="register-name">Nome:</label>
+        <input type="text" id="register-name" name="register-name" required>
+
+        <label for="register-email">E-mail:</label>
+        <input type="email" id="register-email" name="register-email" required>
+
+        <label for="register-password">Senha:</label>
+        <input type="password" id="register-password" name="register-password" required>
+
+        <label for="register-confirm-password">Confirmar Senha:</label>
+        <input type="password" id="register-confirm-password" name="register-confirm-password" required>
+
+        <button type="submit">Registrar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="loginError" style="color: red; display: none;">Usuário ou senha incorretos.</p>
+    </div>
+  </div>
+
+  <script src="funcionalidades.js"></script>
+</body>
+</html>

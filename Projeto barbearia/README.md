@@ -216,7 +216,3 @@ Sugestões para colocar em produção:
 Este projeto está sob a licença **MIT** — faça o fork, copie e adapte para seus propósitos.
 
 ---
-
-## Contato
-
-Se quiser que eu adicione autenticação JWT, endpoints para CRUD de agendamentos, integração com um painel admin ou deploy automático — me avisa que eu já te gero o código pronto e o passo a passo.
